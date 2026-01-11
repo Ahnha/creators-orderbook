@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Creator’s Orderbook — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Creator’s Orderbook." />
+    <style>
+        :root{
+          --bg0:#07080a;
+          --bg1:#0b0d10;
+          --glass: rgba(255,255,255,.08);
+          --glass2: rgba(255,255,255,.06);
+          --stroke: rgba(255,255,255,.14);
+          --text: rgba(255,255,255,.92);
+          --muted: rgba(255,255,255,.72);
+          --muted2: rgba(255,255,255,.55);
+          --shadow: 0 18px 60px rgba(0,0,0,.55);
+          --radius: 22px;
+          --radius2: 16px;
+          --max: 980px;
+        }
+
+        @media (prefers-color-scheme: light){
+          :root{
+            --bg0:#f5f3ef;
+            --bg1:#ebe6df;
+            --glass: rgba(255,255,255,.75);
+            --glass2: rgba(255,255,255,.62);
+            --stroke: rgba(10,10,10,.10);
+            --text: rgba(12,12,12,.92);
+            --muted: rgba(12,12,12,.72);
+            --muted2: rgba(12,12,12,.55);
+            --shadow: 0 18px 60px rgba(0,0,0,.12);
+          }
+        }
+
+        *{ box-sizing:border-box; }
+        html,body{ height:100%; }
+        body{
+          margin:0;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", Segoe UI, Roboto, Helvetica, Arial;
+          color:var(--text);
+          background:
+            radial-gradient(1200px 800px at 20% 10%, rgba(255,255,255,.12), transparent 55%),
+            radial-gradient(900px 700px at 90% 20%, rgba(255,255,255,.10), transparent 55%),
+            linear-gradient(160deg, var(--bg0), var(--bg1));
+          overflow-x:hidden;
+        }
+
+        .noise{
+          pointer-events:none;
+          position:fixed;
+          inset:0;
+          opacity:.10;
+          mix-blend-mode:overlay;
+          background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+          background-size:160px 160px;
+        }
+
+        .wrap{
+          max-width:var(--max);
+          margin:0 auto;
+          padding: 36px 18px 60px;
+        }
+
+        header{
+          display:flex;
+          align-items:center;
+          justify-content:space-between;
+          gap:14px;
+          margin-bottom: 18px;
+        }
+
+        .brand{
+          display:flex;
+          align-items:center;
+          gap:12px;
+          min-width:0;
+        }
+
+        .logo{
+          width:44px; height:44px;
+          border-radius: 14px;
+          background: linear-gradient(135deg, rgba(255,255,255,.25), rgba(255,255,255,.06));
+          border: 1px solid var(--stroke);
+          box-shadow: var(--shadow);
+          display:grid;
+          place-items:center;
+        }
+        .logo svg{ opacity:.92; }
+
+        .titleblock{ min-width:0; }
+        .appname{
+          font-size: 15px;
+          letter-spacing: .2px;
+          font-weight: 650;
+          margin:0;
+          line-height:1.1;
+          white-space:nowrap;
+          overflow:hidden;
+          text-overflow:ellipsis;
+        }
+        .subtitle{
+          margin:4px 0 0;
+          font-size: 13px;
+          color: var(--muted);
+          white-space:nowrap;
+          overflow:hidden;
+          text-overflow:ellipsis;
+        }
+
+        nav{
+          display:flex;
+          gap:10px;
+          flex-wrap:wrap;
+          justify-content:flex-end;
+        }
+        .pill{
+          display:inline-flex;
+          align-items:center;
+          gap:8px;
+          padding: 10px 12px;
+          border-radius: 999px;
+          background: var(--glass2);
+          border: 1px solid var(--stroke);
+          text-decoration:none;
+          color: var(--text);
+          font-size: 13px;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          transition: transform .12s ease, background .12s ease;
+        }
+        .pill:hover{ transform: translateY(-1px); background: var(--glass); }
+
+        .hero{
+          border-radius: var(--radius);
+          background: var(--glass);
+          border: 1px solid var(--stroke);
+          box-shadow: var(--shadow);
+          padding: 22px;
+          backdrop-filter: blur(18px);
+          -webkit-backdrop-filter: blur(18px);
+        }
+
+        h1{
+          margin:0;
+          font-size: 26px;
+          letter-spacing: .2px;
+          line-height: 1.15;
+        }
+
+        .meta{
+          margin: 8px 0 0;
+          color: var(--muted2);
+          font-size: 13px;
+        }
+
+        .content{
+          margin-top: 14px;
+          display:grid;
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+
+        .card{
+          border-radius: var(--radius2);
+          background: var(--glass2);
+          border: 1px solid var(--stroke);
+          box-shadow: 0 12px 40px rgba(0,0,0,.20);
+          padding: 18px;
+          backdrop-filter: blur(18px);
+          -webkit-backdrop-filter: blur(18px);
+        }
+
+        h2{
+          margin: 0 0 10px;
+          font-size: 14px;
+          font-weight: 750;
+          letter-spacing: .4px;
+          text-transform: uppercase;
+          color: var(--muted);
+        }
+
+        p{
+          margin: 0 0 10px;
+          color: var(--muted);
+          font-size: 14px;
+          line-height: 1.65;
+          max-width: 80ch;
+        }
+        p:last-child{ margin-bottom:0; }
+
+        ul{
+          margin: 0;
+          padding-left: 18px;
+          color: var(--muted);
+          font-size: 14px;
+          line-height: 1.65;
+        }
+
+        .kv{
+          display:grid;
+          grid-template-columns: 1fr;
+          gap:10px;
+        }
+
+        .kv .item{
+          border-radius: 14px;
+          padding: 12px 12px;
+          background: rgba(0,0,0,.18);
+          border: 1px solid var(--stroke);
+        }
+        @media (prefers-color-scheme: light){
+          .kv .item{ background: rgba(255,255,255,.55); }
+        }
+
+        .k{ font-weight: 700; color: var(--text); margin:0 0 6px; }
+        .v{ margin:0; color: var(--muted); }
+
+        footer{
+          margin-top: 18px;
+          text-align:center;
+          color: var(--muted2);
+          font-size: 12px;
+          padding: 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+
+<div class="wrap">
+    <header>
+        <div class="brand">
+            <div class="logo" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 4h9a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2V6a2 2 0 0 1 2-2Z" stroke="currentColor" opacity=".9" stroke-width="1.5"/>
+                    <path d="M7 17h10" stroke="currentColor" opacity=".7" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <div class="titleblock">
+                <p class="appname">Creator’s Orderbook</p>
+                <p class="subtitle">Privacy Policy</p>
+            </div>
+        </div>
+
+        <nav>
+            <a class="pill" href="./index.html">Support</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Privacy Policy</h1>
+        <div class="meta"><strong>Effective date:</strong> 2026-01-11</div>
+
+        <div class="content">
+            <div class="card">
+                <h2>Summary</h2>
+                <div class="kv">
+                    <div class="item">
+                        <p class="k">No account required</p>
+                        <p class="v">You can use the app without signing up.</p>
+                    </div>
+                    <div class="item">
+                        <p class="k">Local-first</p>
+                        <p class="v">Your orders are stored on your device.</p>
+                    </div>
+                    <div class="item">
+                        <p class="k">No selling of data</p>
+                        <p class="v">The app does not sell personal data.</p>
+                    </div>
+                    <div class="item">
+                        <p class="k">No ads / tracking</p>
+                        <p class="v">The app does not include third-party advertising SDKs or tracking.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Data the app processes</h2>
+                <p>
+                    Creator’s Orderbook helps you track orders and may store information you enter, such as:
+                </p>
+                <ul>
+                    <li>Order title and notes</li>
+                    <li>Client name (optional)</li>
+                    <li>Deadlines and order status</li>
+                    <li>Payment amounts (total, advance paid) and currency</li>
+                </ul>
+                <p>
+                    This data is stored locally on your device to provide the core functionality of the app.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Data collection</h2>
+                <p>
+                    Creator’s Orderbook does not collect, transmit, or store your personal data on external servers.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Third-party services</h2>
+                <p>
+                    The app does not integrate third-party analytics, advertising, or tracking services.
+                    If this changes in a future version, this policy will be updated.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Permissions</h2>
+                <p>
+                    The app does not require special permissions to function.
+                    If a future feature requires a permission (for example, photo access for attachments),
+                    the app will request it explicitly and only when needed.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Data retention & deletion</h2>
+                <p>
+                    Because data is stored on your device:
+                </p>
+                <ul>
+                    <li>You can delete an order inside the app.</li>
+                    <li>You can delete all app data by uninstalling the app from your device.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Children’s privacy</h2>
+                <p>
+                    The app is not intended for children under 13 and does not knowingly collect personal information from children.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Changes to this policy</h2>
+                <p>
+                    If the app’s privacy practices change, this Privacy Policy may be updated.
+                    The “Effective date” at the top reflects the latest version.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Contact</h2>
+                <p>
+                    Questions about privacy? Contact:
+                    <br />
+                    <strong>Email:</strong> <a href="mailto:[YOUR_EMAIL_HERE]" style="color:inherit;">[YOUR_EMAIL_HERE]</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Last updated: 2026-01-11
+    </footer>
+</div>
+</body>
+</html>
